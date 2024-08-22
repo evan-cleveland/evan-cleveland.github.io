@@ -13,10 +13,11 @@
         }
 
         header {
-            background-color: #607d8b; /* Muted blue-gray */
+            background-color: #3b5998; /* Facebook blue */
             padding: 20px;
             text-align: center;
             color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
         }
 
         header img {
@@ -27,6 +28,8 @@
         header h1 {
             display: inline;
             margin: 0;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
         }
 
         nav {
@@ -34,18 +37,24 @@
             display: flex;
             justify-content: center;
             padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
         }
 
         nav a {
             color: #ffffff;
             margin: 0 15px;
             text-decoration: none;
-            font-weight: normal;
+            font-weight: bold;
             font-family: 'Courier New', Courier, monospace;
+            transition: color 0.3s; /* Smooth color transition on hover */
+        }
+
+        nav a:hover {
+            color: #b3c6d1; /* Slightly lighter color on hover */
         }
 
         .container {
-            padding: 20px;
+            padding: 40px 20px; /* Increased vertical padding */
             display: none;
         }
 
@@ -59,28 +68,59 @@
 
         h2 {
             color: #607d8b;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
         }
 
         footer {
-            background-color: #607d8b;
+            background-color: #607d8b; /* Muted blue-gray */
             text-align: center;
             padding: 10px;
             color: white;
             position: fixed;
             width: 100%;
             bottom: 0;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
         }
 
-        image {
-            height: 50px;
-            width: 75px;
+        .social-links {
+            position: absolute;
+            top: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #b3c6d1;
+        }
+
+        .social-links img {
+            height: 30px;
+            width: 30px;
+            margin-right: 5px;
         }
     </style>
 </head>
 <body>
-    <header style="display: flex; justify-content: center; align-items: center; background-color: #3b5998; color: white; padding: 20px;">
+    <header>
+        <div class="social-links">
+            <a href="https://github.com/evan-cleveland" target="_blank">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/github.svg" alt="GitHub">
+                GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/evan-cleveland-065913302/" target="_blank">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/linkedin.svg" alt="LinkedIn">
+                LinkedIn
+            </a>
+        </div>
         <img src="https://brand.gatech.edu/sites/default/files/inline-images/extended-RGB.png" alt="Georgia Tech Logo" style="height: 50px; margin-right: 10px;">
-        <h1 style="margin: 0;">Evan Cleveland</h1>
+        <h1>Evan Cleveland</h1>
     </header>
     <nav>
         <a href="#welcome" onclick="showPage('welcome')">Welcome</a>
@@ -91,7 +131,7 @@
         <section class="section">
             <h2>Welcome!</h2>
             <p>My name is Evan Cleveland and I am a computer science major at Georgia Tech, with intentions to graduate in May 2027. 
-            This portfolio will showcase my professional and personal achievements, projects, and interests. This site is obviously under construction, so keep checking in for updates!</p>
+            This portfolio will showcase my professional and personal achievements, projects, and interests. This site is continuously under construction, so keep checking in for updates!</p>
         </section>
     </div>
     <div class="container" id="professional">
@@ -102,11 +142,11 @@
                  My directive was to prepare the app for a partnership pitch with a commonly used point of sale system. This includes planning the workload and timeframe of POS integration as well as making aesthetic changes and prototyping new features.
                 <br>Using <strong>Javascript and Node.js</strong> I have implemented a basic ordering system to be integrated with Point of Sale, which will drastically increase the app's value.
             <br> Using <strong>React.js</strong> I have made the graphic changes that you can see below:</p>
-            <div class = "container.active" id = "pmImages" display = "flex">
+            <div class="container.active" id="pmImages" display="flex">
                 <p>Before:</p>
-                <img src = "./assets/pmBefore.png" alt = "Before" width = "480px" height = "300px">
+                <img src="./assets/pmBefore.png" alt="Before" width="480px" height="300px" style="border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
                 <p>After:</p>
-                <img src = "./assets/pmAfter.png" alt = "After" width = "540px" height = "300px">
+                <img src="./assets/pmAfter.png" alt="After" width="540px" height="300px" style="border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
             </div>
             <h3>Skills</h3>
             <p><strong>HTML/CSS</strong> - For basic web development and simple frontend<br>
@@ -117,7 +157,7 @@
             </strong></p>
             <h3>Projects - (More details and images coming soon)</h3>
             <p><strong>RunMaps Social Media</strong> - Using Google Maps API for route sharing and customization</p>
-<p><strong>Three Player Chess</strong> - A fun math and coding challenge to deal with abnormal coordinate systems</p>
+            <p><strong>Three Player Chess</strong> - A fun math and coding challenge to deal with abnormal coordinate systems</p>
         </section>
     </div>
     <div class="container" id="personal">
@@ -132,7 +172,7 @@
         </section>
     </div>
     <footer>
-        <p>&copy; 2024 Evan Cleveland. All Rights Reserved.</p>
+        <p>&copy; 2024 Evan Cleveland. All Rights Reserved. Contact at 770-855-5544 or evancleveland91@gmail.com</p>
     </footer>
     <script>
         function showPage(pageId) {
